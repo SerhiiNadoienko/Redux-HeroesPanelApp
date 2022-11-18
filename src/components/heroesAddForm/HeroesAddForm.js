@@ -1,5 +1,3 @@
-
-
 // Задача для этого компонента:
 // Реализовать создание нового героя с введенными данными. Он должен попадать
 // в общее состояние и отображаться в списке + фильтроваться
@@ -9,8 +7,19 @@
 // Дополнительно:
 // Элементы <option></option> желательно сформировать на базе
 // данных из фильтров
+ 
+import {useHttp} from '../../hooks/http.hook';
+import { useState } from 'react';
+import { useDispatch, useSelector} from 'react-redux';
+import {v4 as uuidv4} from 'uuid'; 
 
-const HeroesAddForm = () => {
+import { heroCreated } from '../../actions'; //экшн принимающий перса и заносящий в стейт ко всем  персам
+
+ const HeroesAddForm = () => {
+    //состояния контроля формы. Тут имя, описание и элемент
+    const [heroName, setHeroName] = useState('');
+    const [heroDesct, setHeroDescr]= useState('');
+    const [Element, setHeroElement] = useState ('');
     return (
         <form className="border p-4 shadow-lg rounded">
             <div className="mb-3">
