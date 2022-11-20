@@ -20,7 +20,7 @@ export const heroesFetchingError = () => {
     }
 }
 //когда происходит загрузка фильтров с сервера
-export const filtersFetchng =()=> {
+export const filtersFetching =()=> {
     return {
         type: 'FILTERS_FETCHING'
     }

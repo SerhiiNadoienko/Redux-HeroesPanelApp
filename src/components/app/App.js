@@ -8,7 +8,7 @@ const App = () => {
     
     return (
         <main className="app">
-            <div className="content">
+            <div className="content back">
                 <HeroesList/>
                 <div className="content__interactive">
                     <HeroesAddForm/>

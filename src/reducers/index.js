@@ -1,5 +1,3 @@
-import { act } from "react-dom/test-utils"
-
 const initialState = {
     heroes: [], //тут все персонажи
     heroesLoadingStatus: 'idle', //тут статус загрузки, по ум никакой
@@ -58,6 +56,8 @@ const reducer = (state = initialState, action) => {
                     state.heroes: //то туда пушим всех персов со стейта
                     state.heroes.filter(item=> item.element === action.payload)//иначе фильтруем каждого персонажа из стейта, сравниваем значение элемента с пришедшим элементом(вода/огонь/воздух...)
             }
+            
+            
        
         case 'HERO_CREATED':
             let newCreatedHeroList = [...state.heroes, action.payload];//разворачиваем персов и пушим сюда новосозданного перса
@@ -71,7 +71,7 @@ const reducer = (state = initialState, action) => {
            
 
         case 'HERO_DELETED':
-            const newHeroList = state.heroes.filter(item => item.id !== action.payload);
+            const newHeroList = state.heroes.filter(item => item.id !== action.payload); //остаылкс всех персонажей у которых не совпадает id
             return {
                 ...state,
                 heroes: newHeroList,
