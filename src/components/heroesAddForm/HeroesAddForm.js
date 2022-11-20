@@ -22,7 +22,7 @@ import './heroesAddForm.scss';
     const [heroDescr, setHeroDescr]= useState('');
     const [heroElement, setHeroElement] = useState('');
 
-    const {filters, filtersLoadingStatus} = useSelector(state=> state);
+    const {filters, filtersLoadingStatus} = useSelector(state=> state.filters);
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -72,7 +72,8 @@ import './heroesAddForm.scss';
         
 
         return (
-        <form /* className="border p-4 shadow-lg rounded" */  className='addForm glow' onSubmit={onSubmitHandler}>
+        <form /* className="border p-4 shadow-lg rounded" */  className='addForm glow ' onSubmit={onSubmitHandler}>
+            <div className='grad'></div>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label fs-4">Имя нового героя</label>
                 <input 
@@ -84,7 +85,7 @@ import './heroesAddForm.scss';
                     placeholder="Как меня зовут?"
                     style={{
                         "height": '70px',
-                        "background-color": "#0F161D",
+                        "backgroundColor": "#0F161D",
                         "color":"white"
                     }}
                     value={heroName} //делаем контролируемую форму, что попадает в стейт то и в инпут
@@ -103,7 +104,7 @@ import './heroesAddForm.scss';
                     placeholder="Что я умею?"
                     style={{"height": '130px',
                     "resize": "none",
-                    "background-color": "#0F161D",
+                    "backgroundColor": "#0F161D",
                     "color":"white"}}
                     
                     value={heroDescr}
@@ -119,7 +120,7 @@ import './heroesAddForm.scss';
                     id="element" 
                     name="element"
                     value={heroElement}
-                    style={{"background-color": "#0F161D",
+                    style={{"backgroundColor": "#0F161D",
                     "color":"white"}}
                     onChange={(e)=>setHeroElement(e.target.value)}>
                     <option value="">Я владею элементом...</option>
