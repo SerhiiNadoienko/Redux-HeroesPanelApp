@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from 'classnames'; 
 
-import {filtersFetching, filtersFetched, filtersFetchingError, activeFilterChanged} from '../../actions';
+import {fetchFilters, activeFilterChanged} from '../../actions';
 import Spinner from "../spinner/Spinner";
 
 // Задача для этого компонента:
@@ -20,10 +20,8 @@ const HeroesFilters = () => {
     const {request} = useHttp();
     //делаем запрос на сервер для получения всех фильтров
     useEffect(() => {
-        dispatch(filtersFetching()); //просто ставим статус загрузки в loading
-        request("http://localhost:3001/filters")   //делаем запрос на сервер
-            .then(data => dispatch(filtersFetched(data)))  //получаем фильтры и передаем в креатор
-            .catch(() => dispatch(filtersFetchingError())) //если не получили, то ошибку
+        dispatch(fetchFilters(request)); //просто ставим статус загрузки в loading
+        
         // eslint-disable-next-line
     }, []);
 

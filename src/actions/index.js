@@ -1,5 +1,17 @@
 //суть в том, какой аргумент принимает - такой в payload и пушим.А дальше в reducer
+export const fetchHeroes =(request)=>(dispatch)=> {
+    dispatch(heroesFetching());
+    request("http://localhost:3001/heroes") //достаем всем героев 
+        .then(data => dispatch(heroesFetched(data))) //передаем в reducer всех героев
+        .catch(() => dispatch(heroesFetchingError())) 
+} 
 
+export const fetchFilters =(request)=>(dispatch)=> {
+    dispatch(filtersFetching()); //просто ставим статус загрузки в loading
+        request("http://localhost:3001/filters")   //делаем запрос на сервер
+            .then(data => dispatch(filtersFetched(data)))  //получаем фильтры и передаем в креатор
+            .catch(() => dispatch(filtersFetchingError())) 
+} 
 //тут просто обозначаем что отправали запрос на получение персов из сервера
 export const heroesFetching = () => {
     return {
