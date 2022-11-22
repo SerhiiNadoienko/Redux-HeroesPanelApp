@@ -1,16 +1,10 @@
 {
   "heroes": [
     {
-      "id": "423bddbc-f6b3-47bb-ae55-197835e063d0",
+      "id": "023f0e5f-a034-4d94-9539-7b6e57b329a3",
       "name": "asd",
       "description": "asd",
-      "element": "water"
-    },
-    {
-      "id": "c7203321-1da0-4f33-8546-072ec73286bb",
-      "name": "asdasd",
-      "description": "asd",
-      "element": "fire"
+      "element": "wind"
     }
   ],
   "filters": [

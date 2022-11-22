@@ -13,7 +13,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
-import { heroCreated } from '../../actions'; //экшн принимающий перса и заносящий в стейт ко всем  персам
+import { heroCreated } from '../../components/heroesList/heroesSlice'; //экшн принимающий перса и заносящий в стейт ко всем  персам
 import './heroesAddForm.scss';
 
  const HeroesAddForm = () => {

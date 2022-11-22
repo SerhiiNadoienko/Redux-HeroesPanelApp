@@ -1,9 +1,9 @@
-import { useHttp } from "../../hooks/http.hook";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from 'classnames'; 
 
-import {fetchFilters, activeFilterChanged} from '../../actions';
+import {activeFilterChanged, fetchFilters} from './filtersSlice';
+
 import Spinner from "../spinner/Spinner";
 
 // Задача для этого компонента:
@@ -17,10 +17,9 @@ const HeroesFilters = () => {
 
     const {filters, filtersLoadingStatus, activeFilter} = useSelector(state=> state.filters);
     const dispatch = useDispatch();
-    const {request} = useHttp();
     //делаем запрос на сервер для получения всех фильтров
     useEffect(() => {
-        dispatch(fetchFilters(request)); //просто ставим статус загрузки в loading
+        dispatch(fetchFilters()); //просто ставим статус загрузки в loading
         
         // eslint-disable-next-line
     }, []);
