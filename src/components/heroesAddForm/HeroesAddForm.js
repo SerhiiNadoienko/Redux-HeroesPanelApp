@@ -116,12 +116,14 @@ import './heroesAddForm.scss';
                 <label htmlFor="element" className="form-label">Выбрать элемент героя</label>
                 <select 
                     required
-                    className="form-select" 
+                    className="form-select xex" 
                     id="element" 
                     name="element"
                     value={heroElement}
                     style={{"backgroundColor": "#0F161D",
-                    "color":"white"}}
+                    "color":"white",
+                    
+                   }}
                     onChange={(e)=>setHeroElement(e.target.value)}>
                     <option value="">Я владею элементом...</option>
                     {renderFilters(filters, filtersLoadingStatus)} 

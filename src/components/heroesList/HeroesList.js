@@ -60,7 +60,7 @@ const HeroesList = () => {
                 <CSSTransition
                         timeout={0}
                         className='hero'>
-                            <h5 className="text-center mt-5" style={{"color": 'white'}}>Героев пока нет</h5>
+                            <h5 className="text-center mt-5" style={{"color": 'white', 'position': 'absolute'}}>Героев пока нет</h5>
                 </CSSTransition>
             )
         }

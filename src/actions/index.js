@@ -1,3 +1,5 @@
+import { createAction } from '@reduxjs/toolkit'
+
 //суть в том, какой аргумент принимает - такой в payload и пушим.А дальше в reducer
 export const fetchHeroes =(request)=>(dispatch)=> {
     dispatch(heroesFetching());
@@ -12,62 +14,31 @@ export const fetchFilters =(request)=>(dispatch)=> {
             .then(data => dispatch(filtersFetched(data)))  //получаем фильтры и передаем в креатор
             .catch(() => dispatch(filtersFetchingError())) 
 } 
+
+
 //тут просто обозначаем что отправали запрос на получение персов из сервера
-export const heroesFetching = () => {
-    return {
-        type: 'HEROES_FETCHING'
-    }
-}
+export const heroesFetching =createAction('HEROES_FETCHING');
+
 //получили персонажей с сервера
-export const heroesFetched = (heroes) => {
-    return {
-        type: 'HEROES_FETCHED',
-        payload: heroes
-    }
-}
+export const heroesFetched =createAction('HEROES_FETCHED');
+
 //тут получаем ошибку при загрузке персонажей
-export const heroesFetchingError = () => {
-    return {
-        type: 'HEROES_FETCHING_ERROR'
-    }
-}
+export const heroesFetchingError =createAction('HEROES_FETCHING_ERROR');
+
 //когда происходит загрузка фильтров с сервера
-export const filtersFetching =()=> {
-    return {
-        type: 'FILTERS_FETCHING'
-    }
-}
+export const filtersFetching =createAction('FILTERS_FETCHING');
+
 //когда фильтры с сервера получены и передаем их дальше  
-export const filtersFetched =(filters)=> {
-    return {
-        type:'FILTERS_FETCHED',
-        payload:filters
-    }
-}
+export const filtersFetched =createAction('FILTERS_FETCHED');
+
 //когда ошибка загрузки фильтров
-export const filtersFetchingError=()=> {
-    return {
-        type: 'FILTERS_FETCHING_ERROR'
-    }
-}
+export const filtersFetchingError =createAction('FILTERS_FETCHING_ERROR');
+
 //когда меняется активный фильтр, принимает в себя какой именно фильтр 
-export const activeFilterChanged =(filter)=> {
-    return {
-        type: 'ACTIVE_FILTER_CHANGED',
-        payload: filter
-    }
-}
+export const activeFilterChanged =createAction('ACTIVE_FILTER_CHANGED');
+
 //создали персонажа и передаем в payload
-export const heroCreated =(hero)=> {
-    return {
-        type:'HERO_CREATED',
-        payload: hero
-    }
-}
+export const heroCreated =createAction('HERO_CREATED');
+
 //принимает в себя id персонажа, которого нужно удалить
-export const heroDeleted =(id)=> {
-    return {
-        type:'HERO_DELETED',
-        payload: id
-    }
-}
+export const heroDeleted =createAction('HERO_DELETED');
