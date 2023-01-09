@@ -15,7 +15,7 @@ Below I described how you can use the application, thank you so much for underst
 git clone https://github.com/SerhiiNadoienko/Redux-HeroesPanelApp.git newFolder
 ```
 
-2. Make sure that you are in the new Folder folder and enter the `npm install` command in the console
+2. Make sure that you are in the *newFolder* folder and enter the `npm install` command in the console
 
 ```
    npm install
