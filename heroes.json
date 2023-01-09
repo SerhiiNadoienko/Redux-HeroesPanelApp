@@ -1,34 +1,28 @@
 {
   "heroes": [
     {
-      "id": "e9ecb30a-a851-4109-b6f2-c6853982e693",
-      "name": "ывап",
-      "description": "ыва",
+      "id": "ca9b0174-b7ea-4d9c-974f-703794a4fa2f",
+      "name": "Aang",
+      "description": "I can use the power of the wind",
+      "element": "wind"
+    },
+    {
+      "id": "442f6154-2580-4666-a768-430209b6181f",
+      "name": "Zuko",
+      "description": "My ability is the strongest. I control the fire",
+      "element": "fire"
+    },
+    {
+      "id": "94104613-42bc-4b7d-a9c0-ca2bf1b9e7da",
+      "name": "Katara",
+      "description": "I can put out any fire. My element is water!",
+      "element": "water"
+    },
+    {
+      "id": "fb52d70c-74b9-445b-877b-2fe30dfa7be4",
+      "name": "Toph Beifong",
+      "description": "I can move rocks and create earthquakes. My element is earth!",
       "element": "earth"
-    },
-    {
-      "id": "e5c45880-2b49-44fb-8002-264cac0eeca5",
-      "name": "asd",
-      "description": "asd",
-      "element": "water"
-    },
-    {
-      "id": "2a7254bd-b1d3-4283-913a-d3781ce72f40",
-      "name": "asd",
-      "description": "asd",
-      "element": "water"
-    },
-    {
-      "id": "0620a958-7921-4858-ab92-68371edb55a3",
-      "name": "asda",
-      "description": "sda",
-      "element": "fire"
-    },
-    {
-      "id": "fb7316ee-ad45-4d65-a86a-df88f99ddc43",
-      "name": "ыва",
-      "description": "ыва",
-      "element": "fire"
     }
   ],
   "filters": [
