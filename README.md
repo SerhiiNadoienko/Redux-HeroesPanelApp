@@ -21,7 +21,7 @@ git clone https://github.com/SerhiiNadoienko/Redux-HeroesPanelApp.git newFolder
    npm install
 ```
 
-3.Enter `npm start` in the console.You don't need to run the JSON-server because I used the library [**concurrently**](https://www.npmjs.com/package/concurrently). And now I'm running a JSON-server and a project at the same time.
+3. Enter `npm start` in the console.You don't need to run the JSON-server because I used the library [**concurrently**](https://www.npmjs.com/package/concurrently). And now I'm running a JSON-server and a project at the same time.
 
 ```
 npm start
